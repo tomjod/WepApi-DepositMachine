@@ -15,4 +15,11 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Deposit/Create/" />
+    <Folder Include="Machine/" />
+    <Folder Include="Users/CommandHandlers/" />
+    <Folder Include="Users/QueryHandlers/" />
+  </ItemGroup>
+
 </Project>

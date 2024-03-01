@@ -1,36 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Wep.API\\Wep.API.csproj": {}
+    "/home/alexis/Documents/repos/WepApi-DepositMachine/Wep.API/Wep.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Application\\Application.csproj": {
+    "/home/alexis/Documents/repos/WepApi-DepositMachine/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Application\\Application.csproj",
+        "projectUniqueName": "/home/alexis/Documents/repos/WepApi-DepositMachine/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Alexi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Application\\obj\\",
+        "projectPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Application/Application.csproj",
+        "packagesPath": "/home/alexis/.nuget/packages/",
+        "outputPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\API\\NuGet.Config",
-          "C:\\Users\\Alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alexis/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Domain\\Domain.csproj"
+              "/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/Domain.csproj": {
+                "projectPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/Domain.csproj"
               }
             }
           }
@@ -39,6 +36,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -70,29 +72,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/alexis/.dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Domain\\Domain.csproj": {
+    "/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Domain\\Domain.csproj",
+        "projectUniqueName": "/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Alexi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Domain\\obj\\",
+        "projectPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/Domain.csproj",
+        "packagesPath": "/home/alexis/.nuget/packages/",
+        "outputPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\API\\NuGet.Config",
-          "C:\\Users\\Alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alexis/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -105,6 +104,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -132,37 +136,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/alexis/.dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Persistence\\Infrastucture.csproj": {
+    "/home/alexis/Documents/repos/WepApi-DepositMachine/Infrastucture/Infrastucture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Persistence\\Infrastucture.csproj",
+        "projectUniqueName": "/home/alexis/Documents/repos/WepApi-DepositMachine/Infrastucture/Infrastucture.csproj",
         "projectName": "Infrastucture",
-        "projectPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Persistence\\Infrastucture.csproj",
-        "packagesPath": "C:\\Users\\Alexi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Persistence\\obj\\",
+        "projectPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Infrastucture/Infrastucture.csproj",
+        "packagesPath": "/home/alexis/.nuget/packages/",
+        "outputPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Infrastucture/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\API\\NuGet.Config",
-          "C:\\Users\\Alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alexis/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Domain\\Domain.csproj"
+              "/home/alexis/Documents/repos/WepApi-DepositMachine/Application/Application.csproj": {
+                "projectPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Application/Application.csproj"
+              },
+              "/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/Domain.csproj": {
+                "projectPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/Domain.csproj"
               }
             }
           }
@@ -171,6 +175,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -182,6 +191,12 @@
               "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.2, )"
             },
@@ -218,40 +233,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/alexis/.dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Wep.API\\Wep.API.csproj": {
+    "/home/alexis/Documents/repos/WepApi-DepositMachine/Wep.API/Wep.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Wep.API\\Wep.API.csproj",
+        "projectUniqueName": "/home/alexis/Documents/repos/WepApi-DepositMachine/Wep.API/Wep.API.csproj",
         "projectName": "Wep.API",
-        "projectPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Wep.API\\Wep.API.csproj",
-        "packagesPath": "C:\\Users\\Alexi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Wep.API\\obj\\",
+        "projectPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Wep.API/Wep.API.csproj",
+        "packagesPath": "/home/alexis/.nuget/packages/",
+        "outputPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Wep.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\API\\NuGet.Config",
-          "C:\\Users\\Alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alexis/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Application\\Application.csproj"
+              "/home/alexis/Documents/repos/WepApi-DepositMachine/Application/Application.csproj": {
+                "projectPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Application/Application.csproj"
               },
-              "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Persistence\\Infrastucture.csproj": {
-                "projectPath": "C:\\Users\\Alexi\\OneDrive - Busso Group\\G&D Depositarios\\Software\\API_Project\\Persistence\\Infrastucture.csproj"
+              "/home/alexis/Documents/repos/WepApi-DepositMachine/Infrastucture/Infrastucture.csproj": {
+                "projectPath": "/home/alexis/Documents/repos/WepApi-DepositMachine/Infrastucture/Infrastucture.csproj"
               }
             }
           }
@@ -260,12 +272,27 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -298,7 +325,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/alexis/.dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

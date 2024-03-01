@@ -1,4 +1,9 @@
 using Application;
+using Application.Abstactions;
+using Domain.User;
+using Infrastucture;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -20,8 +25,34 @@ try
     builder.Services
         .AddApplication()
         .AddInfrastucture();
+    
+    builder.Services.AddScoped<IUserRepository, UserRepository>();
 
     builder.Host.UseSerilog();
+
+    // Configuracion de la conexion a PostgreSQL Server
+    builder.Services.AddDbContext<AppDbContext>(
+        options =>
+        options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")),
+        ServiceLifetime.Scoped);
+
+    // configuracion de Identity
+    builder.Services.AddIdentity<User, IdentityRole<UserId>>(options =>
+    {
+        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequireLowercase = false;
+        options.Lockout.MaxFailedAccessAttempts = 5;
+    })
+                .AddDefaultTokenProviders()
+                .AddRoles<IdentityRole<UserId>>()
+                .AddEntityFrameworkStores<AppDbContext>();
+
+    builder.Services.AddControllersWithViews();
+
+    // Set lowercase for all my urls
+    builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
     var app = builder.Build();
 
@@ -50,4 +81,3 @@ finally
 {
     Log.CloseAndFlush();
 }
-

@@ -4,6 +4,7 @@ namespace Application;
 
 public static class DependencyInjection
 {
+    // Adds infrastructure services to the specified IServiceCollection.
     public static IServiceCollection AddInfrastucture(this IServiceCollection services)
     {
         return services;

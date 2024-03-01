@@ -1,12 +1,25 @@
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\bin\Debug\net8.0\Domain.deps.json
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\bin\Debug\net8.0\Domain.dll
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\bin\Debug\net8.0\Domain.pdb
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\obj\Debug\net8.0\Domain.dll
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\obj\Debug\net8.0\refint\Domain.dll
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\obj\Debug\net8.0\Domain.pdb
-C:\Users\Alexi\OneDrive - Busso Group\G&D Depositarios\Software\API_Project\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/bin/Debug/net8.0/Domain.deps.json
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/bin/Debug/net8.0/Domain.dll
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/bin/Debug/net8.0/Domain.pdb
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/obj/Debug/net8.0/Domain.dll
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/obj/Debug/net8.0/refint/Domain.dll
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/obj/Debug/net8.0/Domain.pdb
+C:/Users/Alexi/OneDrive - Busso Group/G&D Depositarios/Software/API_Project/Domain/obj/Debug/net8.0/ref/Domain.dll
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/bin/Debug/net8.0/Domain.deps.json
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/bin/Debug/net8.0/Domain.dll
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/bin/Debug/net8.0/Domain.pdb
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/Domain.dll
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/refint/Domain.dll
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/Domain.pdb
+/home/alexis/Documents/repos/WepApi-DepositMachine/Domain/obj/Debug/net8.0/ref/Domain.dll

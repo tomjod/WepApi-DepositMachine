@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Domain.User;
+using Microsoft.Extensions.Configuration;
+using Npgsql;
 
 namespace Infrastucture;
-public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
+public class AppDbContext : IdentityDbContext<User, IdentityRole<UserId>, UserId>
 {
     public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
@@ -12,14 +14,36 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid
 
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseNpgsql();
-    }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+         builder.Entity<IdentityUserLogin<UserId>>(b =>
+    {
+        b.HasKey(l => new { l.LoginProvider, l.ProviderKey });
+        b.Property(l => l.UserId).HasConversion(
+            userId => userId.Value,
+            value => new UserId(value));
+    });
+
+    builder.Entity<IdentityUserToken<UserId>>(b =>
+    {
+        b.HasKey(t => new { t.UserId, t.LoginProvider, t.Name });
+        b.Property(t => t.UserId).HasConversion(
+            userId => userId.Value,
+            value => new UserId(value));
+    });
+
+     builder.Entity<IdentityUserRole<UserId>>(b =>
+    {
+        b.HasKey(r => new { r.UserId, r.RoleId });
+        b.Property(r => r.UserId).HasConversion(
+            userId => userId.Value,
+            value => new UserId(value));
+        b.Property(r => r.RoleId).HasConversion(
+            roleId => roleId.Value,
+            value => new UserId(value));
+    });
+
         builder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
 }

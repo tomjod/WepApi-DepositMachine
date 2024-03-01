@@ -1,7 +1,6 @@
-﻿// <copyright file="Deposit.cs" company="Mundos Virtuales SPA">
-// Copyright (c) Mundos Virtuales SPA. All rights reserved.
-// </copyright>
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Deposit;
+[NotMapped]
 
-public record DepositId(Guid Value);
+public record DepositId(string Value);
