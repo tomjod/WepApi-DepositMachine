@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wep.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c234b1e76d80cf993760a3b506f7804bac5e15b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7793400aaab848d896d2cb5a9d1480cec6a01dab")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wep.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wep.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

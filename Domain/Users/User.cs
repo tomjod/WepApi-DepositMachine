@@ -11,14 +11,14 @@ namespace Domain.User;
 /// </summary>
 public class User : IdentityUser<UserId>
 {
-    public UserId UserId {get; private set;}
+    public UserId Id {get; private set;}
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
     public bool IsActive { get; private set; }
     
     private User(string firstName, string lastName, string userName, string email, string passwordHash)
     {
-        UserId = new UserId(Guid.NewGuid());
+        Id = new UserId(Guid.NewGuid());
         FirstName = firstName;
         LastName = lastName;
         UserName = userName;
@@ -56,5 +56,10 @@ public class User : IdentityUser<UserId>
             userName, hashedPassword);
 
         return user;
+    }
+
+    public void Deactivate()
+    {
+        IsActive = false;
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Domain.User;
 
-namespace Application.Abstactions;
+namespace Application.Abstractions;
 
 public interface IUserRepository
 {

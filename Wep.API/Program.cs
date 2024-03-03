@@ -1,10 +1,15 @@
 using Application;
-using Application.Abstactions;
+using Application.Abstractions;
+using Application.Users.Commands;
+using Application.Users.CommandHandlers;
 using Domain.User;
 using Infrastucture;
+using Infrastucture.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using Infrastucture.Repositories.Client;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -26,15 +31,18 @@ try
         .AddApplication()
         .AddInfrastucture();
     
-    builder.Services.AddScoped<IUserRepository, UserRepository>();
-
-    builder.Host.UseSerilog();
-
     // Configuracion de la conexion a PostgreSQL Server
     builder.Services.AddDbContext<AppDbContext>(
         options =>
-        options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")),
-        ServiceLifetime.Scoped);
+        options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
+    
+    builder.Services.AddScoped<IUserRepository, UserRepository>();
+    builder.Services.AddScoped<IClientRepository, ClientRepository>();
+
+    builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUser).Assembly));
+
+    builder.Host.UseSerilog();
+
 
     // configuracion de Identity
     builder.Services.AddIdentity<User, IdentityRole<UserId>>(options =>

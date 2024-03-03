@@ -2,8 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Domain.User;
-using Microsoft.Extensions.Configuration;
-using Npgsql;
+using Domain.Client;
 
 namespace Infrastucture;
 public class AppDbContext : IdentityDbContext<User, IdentityRole<UserId>, UserId>
@@ -13,7 +12,7 @@ public class AppDbContext : IdentityDbContext<User, IdentityRole<UserId>, UserId
     {
 
     }
-
+    public DbSet<Client> Clients { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

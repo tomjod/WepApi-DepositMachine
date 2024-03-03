@@ -1,6 +1,9 @@
-﻿namespace Application;
+﻿using Domain.User;
+using MediatR;
 
-public class DeactivateUser
+namespace Application.Users.CommandHandlers;
+
+public class DeactivateUser : IRequest<User>
 {
-
+        public UserId userId { get; set; }
 }

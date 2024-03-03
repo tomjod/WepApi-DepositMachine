@@ -1,6 +1,18 @@
-﻿namespace Application;
+﻿using MediatR;
+using Domain.User;
 
-public class CreateUser
+namespace Application.Users.Commands;
+
+public class CreateUser : IRequest<User>
 {
+    public string? FirtsName { get; set; }
+
+    public string? LastName { get; set; }
+
+    public string UserName {get; set; } = string.Empty!;
+
+    public string Email { get; set; } = string.Empty!;
+
+    public string Password { get; set; } = string.Empty!;
 
 }

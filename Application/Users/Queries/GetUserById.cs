@@ -1,6 +1,9 @@
-﻿namespace Application;
+﻿using Domain.User;
+using MediatR;
 
-public class GetUserById
+namespace Application;
+
+public class GetUserById : IRequest<User>
 {
-
+    public UserId userId { get; set; }
 }

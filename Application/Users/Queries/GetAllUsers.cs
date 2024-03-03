@@ -1,6 +1,9 @@
-﻿namespace Application;
+﻿using Domain.User;
+using MediatR;
 
-public class GetAllUsers
+namespace Application;
+
+public class GetAllUsers : IRequest<ICollection<User>>
 {
-
+    
 }
