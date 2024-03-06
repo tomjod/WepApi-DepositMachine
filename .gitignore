@@ -1,0 +1,24 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ProjectEvaluation/wepapi-depositmachine.metadata.v7.bin
+/.vs/ProjectEvaluation/wepapi-depositmachine.projects.v7.bin
+/.vs/WepApi-DepositMachine/DesignTimeBuild/.dtbcache.v2
+/.vs/WepApi-DepositMachine/FileContentIndex/030fe407-84cb-43df-b4d3-ba47a8d91a99.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/6d1fd874-2e9d-4be8-9b14-6553164a3b20.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/8c53354c-8d44-4cee-814e-c5398a562fe4.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/ac3a4692-4c8a-494e-b623-fdb6b4f9b18e.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/ddde939e-d382-42ba-b01d-dec98c0dc020.vsidx
+/.vs/WepApi-DepositMachine/v17/.futdcache.v2
+/.vs/WepApi-DepositMachine/v17/.suo
+/.vs/WepApi-DepositMachine/config/applicationhost.config
+/.vs/WepApi-DepositMachine/v17/DocumentLayout.json
+/.vs/WepApi-DepositMachine/FileContentIndex/018b61c2-76f7-41c4-86f3-ce7496e9bbb0.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/a902f37c-5704-4e54-a27b-f977dee02cbf.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/c917fdeb-e2f3-4475-a19a-1f0746f07e3a.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/d08dd6f6-a36b-4ca0-b407-db4024ece9fe.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/d8e19184-4e63-40bd-acc5-8f8adabdfb72.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/2eb1c1d5-b667-4bd9-ba34-dbfee2d96a52.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/3ef0d0f2-80f6-4475-9fd1-48e3b3ef861e.vsidx
+/.vs/WepApi-DepositMachine/FileContentIndex/5d85ebf8-cd89-41ce-916f-770c1c20bbe6.vsidx
