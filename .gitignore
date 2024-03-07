@@ -22,3 +22,8 @@
 /.vs/WepApi-DepositMachine/FileContentIndex/2eb1c1d5-b667-4bd9-ba34-dbfee2d96a52.vsidx
 /.vs/WepApi-DepositMachine/FileContentIndex/3ef0d0f2-80f6-4475-9fd1-48e3b3ef861e.vsidx
 /.vs/WepApi-DepositMachine/FileContentIndex/5d85ebf8-cd89-41ce-916f-770c1c20bbe6.vsidx
+
+.fake
+/.vs/WepApi-DepositMachine/FileContentIndex
+/.vscode/launch.json
+/Application/bin/Debug/net8.0/Application.deps.json
