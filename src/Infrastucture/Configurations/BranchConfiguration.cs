@@ -1,0 +1,36 @@
+﻿using Domain.Entities.ApiKeys;
+using Domain.Entities.Branches;
+using Domain.Entities.Clients;
+using Domain.Entities.DepositMachines;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace Infrastructure;
+
+public class BranchConfiguration : IEntityTypeConfiguration<Branch>
+{
+    public void Configure(EntityTypeBuilder<Branch> builder)
+    {
+        builder.HasKey(b => b.Id);
+
+        builder.Property(b => b.Id).HasConversion(
+            branchId => branchId.Value,
+            value => new BranchId(value));
+
+        builder.Property(b => b.BranchCode).HasMaxLength(5);
+
+        builder.HasOne<Client>()
+        .WithMany()
+        .HasForeignKey(b => b.ClientId)
+        .IsRequired();
+            
+        builder.HasOne<DepositMachine>()
+        .WithOne()
+        .HasForeignKey<Branch>(b => b.DepositMachineId);
+
+        builder.HasIndex(b => b.Email).IsUnique();
+        builder.HasIndex(b => b.BranchCode).IsUnique();
+
+        builder.ToTable("Branches");
+    }
+}

@@ -1,0 +1,12 @@
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\bin\Debug\net8.0\Shared.Kernel.deps.json
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\bin\Debug\net8.0\Shared.Kernel.dll
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\bin\Debug\net8.0\Shared.Kernel.pdb
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\obj\Debug\net8.0\Shared.Kernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\obj\Debug\net8.0\Shared.Kernel.AssemblyInfoInputs.cache
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\obj\Debug\net8.0\Shared.Kernel.AssemblyInfo.cs
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\obj\Debug\net8.0\Shared.Kernel.csproj.CoreCompileInputs.cache
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\obj\Debug\net8.0\Shared.Kernel.sourcelink.json
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\obj\Debug\net8.0\Shared.Kernel.dll
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\obj\Debug\net8.0\refint\Shared.Kernel.dll
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\obj\Debug\net8.0\Shared.Kernel.pdb
+C:\Users\Alexi\Source\Repos\WepApi-DepositMachine\Shared.Kernel\obj\Debug\net8.0\ref\Shared.Kernel.dll
