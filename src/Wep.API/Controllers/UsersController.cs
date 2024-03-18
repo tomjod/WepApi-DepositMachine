@@ -14,9 +14,9 @@ namespace Wep.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class UserController : ApiController
+public class UsersController : ApiController
 {
-    public UserController(ISender sender) 
+    public UsersController(ISender sender) 
         : base(sender)
     {
     }

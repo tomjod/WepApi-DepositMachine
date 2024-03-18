@@ -22,14 +22,6 @@ public class UserRoleConfigurations : IEntityTypeConfiguration<IdentityRole<User
         builder.Property(ur => ur.Id).HasConversion(
             RoleId => RoleId.Value,
             value => new UserId(value));
-
-        // Seed the database with initial IdentityRole data
-        builder.HasData(
-            new IdentityRole<UserId>() { Id = new UserId(Guid.NewGuid()), Name = Role.Admin, NormalizedName = Role.Admin.ToUpper() },
-            new IdentityRole<UserId>() { Id = new UserId(Guid.NewGuid()), Name = Role.Supervisor, NormalizedName = Role.Supervisor.ToUpper() },
-            new IdentityRole<UserId>() { Id = new UserId(Guid.NewGuid()), Name = Role.Tesorero, NormalizedName = Role.Tesorero.ToUpper() },
-            new IdentityRole<UserId>() { Id = new UserId(Guid.NewGuid()), Name = Role.Vigilante, NormalizedName = Role.Vigilante.ToUpper() }
-        );
     }
 
 }

@@ -9,9 +9,9 @@ namespace Wep.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BranchController : ApiController
+    public class BranchesController : ApiController
     {
-        public BranchController(ISender sender) : base(sender)
+        public BranchesController(ISender sender) : base(sender)
         {
         }
 
@@ -29,10 +29,10 @@ namespace Wep.API.Controllers
 
                 if (result.IsFailure) 
                 { 
-                    HandleFailure(result);
+                   return HandleFailure(result);
                 }
 
-                return Ok(result);
+                return Ok(result.Value);
             }
             catch (Exception ex) 
             { 

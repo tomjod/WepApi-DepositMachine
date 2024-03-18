@@ -1,5 +1,6 @@
 ﻿using Domain.Entities.BanknoteValidationModules;
 using Domain.Entities.DepositMachines;
+using Domain.Entities.Seals;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure;

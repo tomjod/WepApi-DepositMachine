@@ -11,24 +11,22 @@ namespace Infrastructure.Repositories
 {
     public class BranchRepository : IBranchRepository
     {
-        private readonly AppDbContext _DbContext;
+        private readonly AppDbContext _dbContext;
 
         public BranchRepository(AppDbContext dbContext)
         {
-            _DbContext = dbContext;
+            _dbContext = dbContext;
         }
 
         public void CreateBranch(Branch branch) =>
-            _DbContext.Set<Branch>().Add(branch);
+            _dbContext.Set<Branch>().Add(branch);
 
 
         public async Task<IEnumerable<Branch>> GetAllBranchesAsync() =>
-             await _DbContext.Set<Branch>().ToListAsync();
+             await _dbContext.Set<Branch>().ToListAsync();
           
 
-        public Task<Branch> GetBranchById(BranchId id)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<Branch?> GetBranchByIdAsync(BranchId id) => 
+            await _dbContext.Set<Branch>().FirstOrDefaultAsync(x => x.Id == id);
     }
 }

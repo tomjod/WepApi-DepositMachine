@@ -11,6 +11,12 @@ namespace Domain.Repositories
     {
         void CreateBanknoteValidationModule(BanknoteValidationModule banknoteValidationModule);
 
-        Task<BanknoteValidationModule?> GetBanknoteValidationModuleAsync(BanknoteValidationModuleId Id);
+        Task<BanknoteValidationModule?> GetBanknoteValidationModuleAsync(
+            BanknoteValidationModuleId Id, 
+            CancellationToken cancellationToken = default);
+
+        Task<bool> IsSerialUniqueAsync(
+            string serialNumber, 
+            CancellationToken cancellationToken = default);
     }
 }

@@ -9,10 +9,10 @@ namespace Wep.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class DepositController : ApiController
+    public class DepositsController : ApiController
     {
 
-        public DepositController(ISender sender) : base(sender)
+        public DepositsController(ISender sender) : base(sender)
         {
         }
 

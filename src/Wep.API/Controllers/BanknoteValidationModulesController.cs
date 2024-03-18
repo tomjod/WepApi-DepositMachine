@@ -13,9 +13,9 @@ namespace Wep.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class BanknoteValidationModuleController : ApiController
+public class BanknoteValidationModulesController : ApiController
 {
-    public BanknoteValidationModuleController(ISender sender) : base(sender)
+    public BanknoteValidationModulesController(ISender sender) : base(sender)
     {
     }
 
@@ -30,14 +30,14 @@ public class BanknoteValidationModuleController : ApiController
             HandleFailure(result);
         }
 
-        return CreatedAtAction(nameof(Get), new { Id = result.Value }, result.Value);
+        return CreatedAtAction(nameof(Get), new { Id = result.Value.Value }, result.Value);
 
     }
 
     [HttpGet("{Id:guid}")]
-    public async Task<IActionResult> Get(Guid id)
+    public async Task<IActionResult> Get(Guid Id)
     {
-        var banknoteValidationModuleId = new BanknoteValidationModuleId(id);
+        var banknoteValidationModuleId = new BanknoteValidationModuleId(Id);
 
         var query = new GetBanknoteValidationModuleByIdQuery(banknoteValidationModuleId);
 

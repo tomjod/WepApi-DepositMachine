@@ -8,6 +8,7 @@ using Domain.Entities.DepositMachines;
 using Domain.Entities.Clients;
 using Domain.Entities.ApiKeys;
 using SharedKernel;
+using Domain.ValueObjects;
 
 namespace Domain.Entities.Branches;
 
@@ -27,17 +28,14 @@ public class Branch
 
     public string Manager { get; private set; } = string.Empty;
 
-    public string Email { get; private set; } = string.Empty;
+    public Email Email { get; private set; }
 
     public string OperationStatus { get; private set; } = string.Empty;
-
-    public int CurrentAmount { get; private set; }
-
-    public int AmountSinceLastEmptied { get; private set; }
 
     public DateTime? LastEmptied { get; private set; }
 
     public static Result<Branch> Create(
+        string name,
         ClientId clientId,
         DepositMachineId machineId,
         string branchCode,
@@ -55,48 +53,16 @@ public class Branch
         var branch = new Branch
         {
             Id = new BranchId(Guid.NewGuid()),
+            Name = name,
             ClientId = clientId,
             DepositMachineId = machineId,
             BranchCode = branchCode,
             PhoneNumber = phoneNumber,
             Manager = manager,
-            Email = email,
+            Email = Email.Create(email).Value,
             OperationStatus = "Active",
-            CurrentAmount = 0,
-            AmountSinceLastEmptied = 0,
-            LastEmptied = null
         };
 
         return Result.Success(branch); //return branch;
     }
-
-    public void UpdateCurrentAmount(int currentAmount)
-    {
-        if (currentAmount < 0)
-        {
-            throw new Exception("La cantidad actual no puede ser negativa");
-        }
-
-        CurrentAmount += currentAmount;
-    }
-
-    public void AddToAmountSinceLastEmptied(int amount)
-    {
-        if (amount < 0)
-        {
-            throw new Exception("La cantidad no puede ser negativa");
-        }
-
-        AmountSinceLastEmptied += amount;
-    }
-
-    public void EmptyMachine()
-    {
-        AddToAmountSinceLastEmptied(CurrentAmount);
-
-        CurrentAmount = 0;
-        LastEmptied = DateTime.Now;
-
-    }
-
 }

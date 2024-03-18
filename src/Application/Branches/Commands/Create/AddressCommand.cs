@@ -1,15 +1,15 @@
 ﻿namespace Application.Branches.Commands.Create;
-public sealed record AddressCommand
+public sealed class AddressCommand
 {
-    public string Address1 { get; private set; } = string.Empty;
+    public string Address1 { get; set; } = string.Empty;
 
-    public string Address2 { get; private set; } = string.Empty;
+    public string Address2 { get; set; } = string.Empty;
 
-    public string City { get; private set; } = string.Empty;
+    public string City { get; set; } = string.Empty;
 
-    public string State { get; private set; } = string.Empty;
+    public string State { get; set; } = string.Empty;
 
-    public string Country { get; private set; } = string.Empty;
+    public string Country { get; set; } = string.Empty;
 
-    public int PostalCode { get; private set; }
+    public int PostalCode { get; set; }
 }

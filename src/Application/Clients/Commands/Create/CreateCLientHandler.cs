@@ -33,6 +33,13 @@ public class CreateCLientHandler : ICommandHandler<CreateClientCommand, ClientId
                 .Failure<ClientId>(rutResult.Error);
         }
 
+        if (string.IsNullOrEmpty(request.CompanyName)) 
+        { 
+            return Result.Failure<ClientId>(new Error(
+                "CompanyName.IsNull",
+                "Company Name can't be null"));
+        }
+
         if (!await _clientRepository.IsRutUniqueAsync(rutResult.Value))
         {
             return Result
@@ -40,11 +47,15 @@ public class CreateCLientHandler : ICommandHandler<CreateClientCommand, ClientId
                 DomainErrors.Client.RutAlreadyInUse);
         }
 
+        var companyNameNormalized = request.CompanyName.ToUpper();
+        var businessTypeNormalized = request.BusinessType.ToUpper();
+        var representativeNormalized = request.Representative.ToUpper();
+
         var client = Client.Create(
             rutResult.Value,
-            request.CompanyName,
-            request.BusinessType,
-            request.Representative);
+            companyNameNormalized,
+            businessTypeNormalized,
+            representativeNormalized);
 
          _clientRepository.CreateClient(client);
 

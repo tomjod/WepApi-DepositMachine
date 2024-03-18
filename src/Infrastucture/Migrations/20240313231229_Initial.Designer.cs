@@ -392,7 +392,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("RecordDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("SealNumber")
+                    b.Property<string>("SerialNumber")
                         .IsRequired()
                         .HasColumnType("text");
 

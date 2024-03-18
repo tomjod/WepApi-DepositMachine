@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "Wep.API.Controllers.BanknoteValidationModuleController",
+    "ContainingType": "Wep.API.Controllers.BanknoteValidationModulesController",
     "Method": "Post",
-    "RelativePath": "api/banknotevalidationmodule",
+    "RelativePath": "api/banknotevalidationmodules",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,57 +16,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Wep.API.Controllers.BanknoteValidationModuleController",
+    "ContainingType": "Wep.API.Controllers.BanknoteValidationModulesController",
     "Method": "Get",
-    "RelativePath": "api/banknotevalidationmodule/{Id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Wep.API.Controllers.BranchController",
-    "Method": "Post",
-    "RelativePath": "api/branch",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "command",
-        "Type": "Application.Branches.Commands.Create.CreateBranchCommand",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Wep.API.Controllers.ClientController",
-    "Method": "CreateClient",
-    "RelativePath": "api/client",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Wep.API.Contracts.Clients.RegisterClientRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Wep.API.Controllers.ClientController",
-    "Method": "Get",
-    "RelativePath": "api/client/{Id}",
+    "RelativePath": "api/banknotevalidationmodules/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -80,9 +32,89 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Wep.API.Controllers.DepositController",
+    "ContainingType": "Wep.API.Controllers.BranchesController",
     "Method": "Post",
-    "RelativePath": "api/deposit",
+    "RelativePath": "api/branches",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Branches.Commands.Create.CreateBranchCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wep.API.Controllers.ClientsController",
+    "Method": "CreateClient",
+    "RelativePath": "api/clients",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Wep.API.Contracts.Clients.RegisterClientRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wep.API.Controllers.ClientsController",
+    "Method": "Get",
+    "RelativePath": "api/clients/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wep.API.Controllers.DepositMachinesController",
+    "Method": "Post",
+    "RelativePath": "api/depositmachines",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.DepositMachines.Commands.Create.CreateDepositMachineCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wep.API.Controllers.DepositMachinesController",
+    "Method": "Get",
+    "RelativePath": "api/depositmachines/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wep.API.Controllers.DepositsController",
+    "Method": "Post",
+    "RelativePath": "api/deposits",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -96,9 +128,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Wep.API.Controllers.UserController",
+    "ContainingType": "Wep.API.Controllers.UsersController",
     "Method": "Post",
-    "RelativePath": "api/user",
+    "RelativePath": "api/users",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -112,9 +144,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Wep.API.Controllers.UserController",
+    "ContainingType": "Wep.API.Controllers.UsersController",
     "Method": "SetUserRole",
-    "RelativePath": "api/user/set-role",
+    "RelativePath": "api/users/set-role",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -128,9 +160,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Wep.API.Controllers.UserController",
+    "ContainingType": "Wep.API.Controllers.UsersController",
     "Method": "Get",
-    "RelativePath": "api/user/{Id}",
+    "RelativePath": "api/users/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

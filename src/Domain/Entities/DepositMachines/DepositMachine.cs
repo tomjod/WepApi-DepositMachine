@@ -8,6 +8,7 @@ public class DepositMachine
     public DepositMachineId Id { get; private set; }
     public BanknoteValidationModuleId BanknoteValidationModuleId { get; private set; }
     public string SerialNumber { get; private set; } = string.Empty;
+    public string Model { get; private set; }
     public int ManufactureYear { get; private set; }
     public DateTime RecordDate { get; private set; }
 
@@ -15,18 +16,21 @@ public class DepositMachine
         DepositMachineId id, 
         BanknoteValidationModuleId banknoteValidationModuleId,
         string serialNumber,
+        string model,
         int manufactureYear)
     {
         Id = id;
         BanknoteValidationModuleId = banknoteValidationModuleId;
         SerialNumber = serialNumber;
         ManufactureYear = manufactureYear;
-        RecordDate = DateTime.Now;
+        Model = model;
+        RecordDate = DateTime.UtcNow;
     }
 
     public static Result<DepositMachine> Create(
         BanknoteValidationModuleId banknoteValidationModuleId,
         string serialNumber,
+        string model,
         int manufactureYear)
     {
         if (banknoteValidationModuleId == null)
@@ -45,6 +49,7 @@ public class DepositMachine
            new DepositMachineId(Guid.NewGuid()),
            banknoteValidationModuleId, 
            serialNumber,
+           model,
            manufactureYear);
 
         return depositMachine;

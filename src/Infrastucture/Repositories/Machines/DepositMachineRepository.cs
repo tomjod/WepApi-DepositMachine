@@ -23,8 +23,10 @@ namespace Infrastructure.Repositories.Machines
             _context.Add(machine);
         }
 
-        public async Task<DepositMachine?> GetByIdAsync(DepositMachineId Id, CancellationToken cancellation) =>
+        public async Task<DepositMachine?> GetByIdAsync(
+            DepositMachineId Id, 
+            CancellationToken cancellation) =>
          await _context.Set<DepositMachine>()
-            .FirstOrDefaultAsync(m => m.Id.Value == Id.Value);
+            .FirstOrDefaultAsync(m => m.Id == Id);
     }
 }

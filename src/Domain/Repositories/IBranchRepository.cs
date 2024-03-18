@@ -13,6 +13,6 @@ namespace Domain.Repositories
 
         Task<IEnumerable<Branch>> GetAllBranchesAsync();
 
-        Task<Branch> GetBranchById(BranchId id); 
+        Task<Branch?> GetBranchByIdAsync(BranchId id); 
     }
 }

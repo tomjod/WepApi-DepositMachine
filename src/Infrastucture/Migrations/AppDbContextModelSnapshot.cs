@@ -187,13 +187,33 @@ namespace Infrastructure.Migrations
                     b.ToTable("Banks", (string)null);
                 });
 
-            modelBuilder.Entity("Domain.Entities.Branches.Branch", b =>
+            modelBuilder.Entity("Domain.Entities.BranchCashDetails.BranchCashDetails", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("AmountSinceLastEmptied")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("BagId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BranchId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("LastEmptied")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BagId");
+
+                    b.HasIndex("BranchId");
+
+                    b.ToTable("BranchCashDetails", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.Branches.Branch", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
 
                     b.Property<string>("BranchCode")
                         .IsRequired()
@@ -202,9 +222,6 @@ namespace Infrastructure.Migrations
 
                     b.Property<Guid>("ClientId")
                         .HasColumnType("uuid");
-
-                    b.Property<int>("CurrentAmount")
-                        .HasColumnType("integer");
 
                     b.Property<Guid?>("DepositMachineId")
                         .HasColumnType("uuid");
@@ -245,6 +262,35 @@ namespace Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Branches", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.CashBagWithdrawalEvents.CashBagWithdrawalEvent", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BagId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BranchId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BagId");
+
+                    b.HasIndex("BranchId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CashBagWithdrawalEvents", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Clients.Client", b =>
@@ -300,6 +346,10 @@ namespace Infrastructure.Migrations
 
                     b.Property<int>("ManufactureYear")
                         .HasColumnType("integer");
+
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("RecordDate")
                         .HasColumnType("timestamp with time zone");
@@ -377,7 +427,7 @@ namespace Infrastructure.Migrations
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("BagId")
+                    b.Property<Guid?>("BagId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("DepositMachineId")
@@ -389,7 +439,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("RecordDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("SealNumber")
+                    b.Property<string>("SerialNumber")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -520,32 +570,6 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("5c54ad6b-1626-49ff-a7a0-e7b54375c75f"),
-                            Name = "Administrator",
-                            NormalizedName = "ADMINISTRATOR"
-                        },
-                        new
-                        {
-                            Id = new Guid("979c3a74-3d3e-4f80-8699-a6c0a502823c"),
-                            Name = "Supervisor",
-                            NormalizedName = "SUPERVISOR"
-                        },
-                        new
-                        {
-                            Id = new Guid("a07bd4fb-c2c0-4699-a9db-19a66c43cc4c"),
-                            Name = "Tesorero",
-                            NormalizedName = "TESORERO"
-                        },
-                        new
-                        {
-                            Id = new Guid("7d363a05-7fc5-4ffc-9f25-75fa845b075b"),
-                            Name = "Vigilante",
-                            NormalizedName = "VIGILANTE"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<Domain.Entities.Users.UserId>", b =>
@@ -664,6 +688,73 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Domain.Entities.BranchCashDetails.BranchCashDetails", b =>
+                {
+                    b.HasOne("Domain.Entities.Bags.Bag", null)
+                        .WithMany()
+                        .HasForeignKey("BagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Branches.Branch", null)
+                        .WithMany()
+                        .HasForeignKey("BranchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.OwnsOne("Domain.ValueObjects.Cash", "CurrentValue", b1 =>
+                        {
+                            b1.Property<Guid>("BranchCashDetailsId")
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Amount")
+                                .HasMaxLength(9)
+                                .HasColumnType("integer")
+                                .HasColumnName("CurrentAmount");
+
+                            b1.Property<int>("Pieces")
+                                .HasMaxLength(5)
+                                .HasColumnType("integer")
+                                .HasColumnName("CurrentPieces");
+
+                            b1.HasKey("BranchCashDetailsId");
+
+                            b1.ToTable("BranchCashDetails");
+
+                            b1.WithOwner()
+                                .HasForeignKey("BranchCashDetailsId");
+                        });
+
+                    b.OwnsOne("Domain.ValueObjects.Cash", "LastValue", b1 =>
+                        {
+                            b1.Property<Guid>("BranchCashDetailsId")
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Amount")
+                                .HasMaxLength(9)
+                                .HasColumnType("integer")
+                                .HasColumnName("AmountSinceLastEmptied");
+
+                            b1.Property<int>("Pieces")
+                                .HasMaxLength(5)
+                                .HasColumnType("integer")
+                                .HasColumnName("PiecesSinceLastEmptied ");
+
+                            b1.HasKey("BranchCashDetailsId");
+
+                            b1.ToTable("BranchCashDetails");
+
+                            b1.WithOwner()
+                                .HasForeignKey("BranchCashDetailsId");
+                        });
+
+                    b.Navigation("CurrentValue")
+                        .IsRequired();
+
+                    b.Navigation("LastValue")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Domain.Entities.Branches.Branch", b =>
                 {
                     b.HasOne("Domain.Entities.Clients.Client", null)
@@ -675,6 +766,53 @@ namespace Infrastructure.Migrations
                     b.HasOne("Domain.Entities.DepositMachines.DepositMachine", null)
                         .WithOne()
                         .HasForeignKey("Domain.Entities.Branches.Branch", "DepositMachineId");
+                });
+
+            modelBuilder.Entity("Domain.Entities.CashBagWithdrawalEvents.CashBagWithdrawalEvent", b =>
+                {
+                    b.HasOne("Domain.Entities.Bags.Bag", null)
+                        .WithMany()
+                        .HasForeignKey("BagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Branches.Branch", null)
+                        .WithMany()
+                        .HasForeignKey("BranchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Users.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.OwnsOne("Domain.ValueObjects.Cash", "Cash", b1 =>
+                        {
+                            b1.Property<Guid>("CashBagWithdrawalEventId")
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Amount")
+                                .HasMaxLength(9)
+                                .HasColumnType("integer")
+                                .HasColumnName("TotalAmount");
+
+                            b1.Property<int>("Pieces")
+                                .HasMaxLength(5)
+                                .HasColumnType("integer")
+                                .HasColumnName("TotalPieces");
+
+                            b1.HasKey("CashBagWithdrawalEventId");
+
+                            b1.ToTable("CashBagWithdrawalEvents");
+
+                            b1.WithOwner()
+                                .HasForeignKey("CashBagWithdrawalEventId");
+                        });
+
+                    b.Navigation("Cash")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Domain.Entities.Denominations.Denomination", b =>
@@ -752,9 +890,7 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Domain.Entities.Bags.Bag", null)
                         .WithMany()
-                        .HasForeignKey("BagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BagId");
 
                     b.HasOne("Domain.Entities.DepositMachines.DepositMachine", null)
                         .WithMany()

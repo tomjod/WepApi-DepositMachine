@@ -14,11 +14,11 @@ public class SealConfigurations : IEntityTypeConfiguration<Seal>
         builder.Property(s => s.Id).HasConversion(
             sealId => sealId.Value,
             value => new SealId(value));
-        
+
         builder.HasOne<DepositMachine>()
-        .WithMany()
-        .HasForeignKey(s => s.DepositMachineId);
-        
+           .WithMany()
+           .HasForeignKey(s => s.DepositMachineId);
+
         builder.HasOne<Bag>()
         .WithMany()
         .HasForeignKey(s => s.BagId);

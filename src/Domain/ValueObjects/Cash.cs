@@ -3,14 +3,10 @@
 // </copyright>
 namespace Domain.ValueObjects;
 
-public record Cash
+public sealed record Cash
 {
-    public int Pieces { get; init; }
-    public int Amount { get; init; }
-
-    public Cash() : this(0, 0)
-    {
-    }
+    public int Pieces { get; set; }
+    public int Amount { get; set; }
 
     private Cash(int pieces, int amount)
     {
@@ -18,8 +14,8 @@ public record Cash
         Amount = amount;
     }
 
-    public Cash Update(int piecesToAdd, int amountToAdd)
+    public static Cash Add(int piecesToAdd, int amountToAdd)
     {
-        return new Cash(Pieces + piecesToAdd, Amount + amountToAdd);
+        return new Cash(piecesToAdd, amountToAdd);
     }
 }

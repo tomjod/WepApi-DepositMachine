@@ -33,11 +33,11 @@ public class Deposit
     public DateTime RecordDate { get; private set; }
     public int TotalPieces {  get; private set; }
     public int TotalAmount {  get; private set; }
-
-
     public IReadOnlyList<DepositLineItem> DepositLineItem => _depositLineItem.ToList();
 
-    // Method to calculate the totals of totalAmount and totalPieces based on the denomination and quantity of each deposit denomination.
+
+    // Method to calculate the totals of totalAmount and totalPieces
+    // based on the denomination and quantity of each deposit denomination.
     private void CalculateTotals()
     {
         foreach (var depositDenomination in _depositLineItem)

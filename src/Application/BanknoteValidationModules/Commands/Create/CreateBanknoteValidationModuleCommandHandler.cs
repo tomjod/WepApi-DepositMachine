@@ -37,6 +37,14 @@ namespace Application.BanknoteValidationModules.Commands.Create
                     "Model can't be null"));
             }
 
+            if (!await _banknoteValidationModuleRepository
+                .IsSerialUniqueAsync(request.SerialNumber))
+            {
+                return Result.Failure<BanknoteValidationModuleId>(new Error(
+                    "BanknoteValidationModule.SerialIsNotUnique",
+                    $"The serial number specified {request.SerialNumber} is not unique"));
+            }
+
             var banknoteValidationModule = BanknoteValidationModule.Create(
                 request.SerialNumber,
                 request.Model,

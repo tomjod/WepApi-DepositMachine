@@ -1,4 +1,5 @@
-﻿using Domain.Entities.Users;
+﻿using Domain.Entities.CashBagWithdrawalEvents;
+using Domain.Entities.Users;
 using Domain.ValueObjects;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,11 @@ public class UserConfigurations : IEntityTypeConfiguration<User>
         builder.Property(u => u.UserName)
            .HasConversion(n => n.Value, v => RUN.Create(v).Value)
            .HasMaxLength(RUN.MaxLength);
+
+        builder.HasMany<CashBagWithdrawalEvent>()
+             .WithOne()
+             .HasForeignKey(b => b.UserId)
+             .IsRequired();
 
         builder.HasIndex(u => u.UserName).IsUnique();
         

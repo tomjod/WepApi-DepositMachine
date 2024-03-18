@@ -69,6 +69,7 @@ try
 
     //builder.Services.AddQuartzHostedService();
 
+    builder.Services.AddScoped<ISealRepository, SealRepository>();
     builder.Services.AddScoped<IApiKeyService, ApiKeyService>();
     builder.Services.AddScoped<IApiKeyRepository, ApiKeyRepository>();
     builder.Services.AddScoped<IBranchRepository, BranchRepository>();

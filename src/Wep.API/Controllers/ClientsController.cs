@@ -7,14 +7,15 @@ using Wep.API.Contracts.Clients;
 using SharedKernel;
 using Domain.Entities.Clients;
 using Application.Clients.Queries;
+using Newtonsoft.Json.Linq;
 
 namespace Wep.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ClientController : ApiController
+public class ClientsController : ApiController
 {
-    public ClientController(ISender sender)
+    public ClientsController(ISender sender)
         : base(sender)
     {
     }
@@ -45,7 +46,10 @@ public class ClientController : ApiController
                 return HandleFailure(result);
             }
 
-            return CreatedAtAction(nameof(Get), new { Id = result.Value.Value }, result.Value.Value);
+            return CreatedAtAction(
+                nameof(Get),
+                new { Id = result.Value.Value }, 
+                result.Value);
         }
 
         catch (Exception ex)

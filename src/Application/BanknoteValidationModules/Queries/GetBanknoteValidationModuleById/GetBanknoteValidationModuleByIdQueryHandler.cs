@@ -27,9 +27,9 @@ namespace Application.BanknoteValidationModules.Queries.GetBanknoteValidationMod
 
             if (banknoteValidationModule == null)
             {
-                Result<BanknoteValidationModule>.Failure(new Error(
+                return Result.Failure<BanknoteValidationModule>(new Error(
                     "BanknoteValidationModule.NotFound",
-                    $"Banknote Validation Modulo with Id {request.Id} not Found "));
+                    $"Banknote Validation Modulo with Id {request.Id.Value} not Found "));
             }
 
             return banknoteValidationModule;

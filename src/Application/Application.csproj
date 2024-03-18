@@ -24,6 +24,6 @@
   <ItemGroup>
     <Folder Include="Branches\Queries\" />
     <Folder Include="Deposits\Queries\" />
-    <Folder Include="DepositMachines\Queries\" />
+    <Folder Include="Seals\Queries\" />
   </ItemGroup>
 </Project>
